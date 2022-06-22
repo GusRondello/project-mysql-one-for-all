@@ -4,6 +4,8 @@ SELECT u.username AS usuario,
     'Usuário inativo')
 AS condicao_usuario
 FROM SpotifyClone.history AS h 
-INNER JOIN users AS u ON u.id = h.users_id
-GROUP BY users_id
+INNER JOIN users AS u 
+ON u.id = h.user_id
+
+GROUP BY user_id
 ORDER BY u.username;
